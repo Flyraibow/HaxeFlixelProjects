@@ -1,0 +1,9 @@
+# Ignore Export folders
+export/
+**/export/
+
+# Ignore macOS related
+.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store
