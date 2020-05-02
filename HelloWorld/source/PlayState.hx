@@ -6,6 +6,9 @@ import flixel.FlxG;
 import flixel.FlxState;
 import flixel.util.FlxColor;
 import myUI.SimpleTextButton;
+import haxe.Json;
+import openfl.Assets;
+import my.Data;
 
 class PlayState extends FlxState {
 	override public function create() {
@@ -29,6 +32,10 @@ class PlayState extends FlxState {
 		exitButton.createTextLabel("X");
 		add(exitButton);
 		#end
+
+		var goodsData : GoodsData =  (cast Json.parse(Assets.getText(AssetPaths.test__json)));
+		trace(goodsData.name);
+		
 	}
 
 	override public function update(elapsed:Float) {
